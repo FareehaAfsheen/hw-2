@@ -28,3 +28,5 @@ def find_account(accounts, name):
         if acc.name == name:
             return acc
     return None
+
+accounts = []
