@@ -120,3 +120,21 @@ while True:
                     print("Transfer successful!")
                     print("Sender Balance:", sender.get_balance())
                     print("Receiver Balance:", receiver.get_balance())
+
+    elif choice == '7':
+        name = input("Enter account holder name: ")
+        acc = find_account(accounts, name)
+
+        if acc is None:
+            print("Account not found")
+
+        else:
+            accounts.remove(acc)
+            print(f"Account of {name} deleted successfully")
+
+    elif choice == '8':
+        print("System closed")
+        break
+
+    else:
+        print("Invalid choice")
