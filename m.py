@@ -30,3 +30,14 @@ def find_account(accounts, name):
     return None
 
 accounts = []
+
+while True:
+    print('\n --Bank Management System--')
+    print("1. Add Account")
+    print("2. Show All Accounts")
+    print("3. Check Balance")
+    print("4. Deposit")
+    print("5. Withdraw")
+    print("6. Transfer Money")
+    print("7. Delete Account")
+    print("8. Exit")
