@@ -71,56 +71,7 @@ while True:
         else:
             print("Balance:", acc.get_balance())
 
-    elif choice == '4':
-        name = input("Enter account holder name: ")
-        acc = find_account(accounts, name)
-
-        if acc is None:
-            print("Account not found")
-        else:
-            deposit_amount = float(input("Enter deposit amount: "))
-            acc.deposit(deposit_amount)
-            print("Final Balance:", acc.get_balance())
-
-    elif choice == '5':
-        name = input("Enter account holder name: ")
-        acc = find_account(accounts, name)
-
-        if acc is None:
-            print("Account not found")
-        else:
-            withdraw_amount = float(input("Enter Withdraw Amount: "))
-            acc.withdraw(withdraw_amount)
-            print("Final Balance:", acc.get_balance())
-
-    elif choice == '6':
-        sender_name = input("Enter sender account name: ")
-        sender = find_account(accounts, sender_name)
-
-        if sender is None:
-            print("Sender account not found")
-
-        else:
-            receiver_name = input("Enter receiver account name: ")
-            receiver = find_account(accounts, receiver_name)
-
-            if receiver is None:
-                print("Receiver account not found")
-
-            else:
-                amount = float(input("Enter transfer amount: "))
-
-                if amount > sender.get_balance():
-                    print("Insufficient Balance")
-
-                else:
-                    sender.withdraw(amount)
-                    receiver.deposit(amount)
-
-                    print("Transfer successful!")
-                    print("Sender Balance:", sender.get_balance())
-                    print("Receiver Balance:", receiver.get_balance())
-
+ 
     elif choice == '7':
         name = input("Enter account holder name: ")
         acc = find_account(accounts, name)
